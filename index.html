@@ -431,8 +431,7 @@ input[type=range]{width:100%;accent-color:var(--blue);height:28px}
     <p class="sub">Diseño del instrumento de recolección de datos</p>
     <p class="meta">Asignatura: Recolección de Datos · Periodo 2026-2</p>
     <div class="team"><span>Francisco Castro</span><span>María José Dangond</span><span>Santiago Parada</span><span>Natalia Rodríguez</span><span>Andrea Silva</span></div>
-    <div class="hintkeys"><span><kbd>←</kbd> <kbd>→</kbd> avanzar</span><span><kbd>G</kbd> índice</span><span><kbd>F</kbd> pantalla completa</span></div>
-  </div>
+      </div>
   <div>
     <svg id="cover-dots" class="dots" viewBox="0 0 470 470" width="470" height="470" role="img" aria-label="353 puntos que representan a los estudiantes de referencia; 131 resaltados representan la meta de encuestas"></svg>
     <div class="dotcap">
@@ -518,11 +517,6 @@ input[type=range]{width:100%;accent-color:var(--blue);height:28px}
       <div style="flex:1"><div class="card" id="og-detail" style="min-height:215px"></div></div>
     </div>
     <div class="row" style="margin-top:20px;gap:20px">
-      <div class="card" style="flex:1.15">
-        <h4>Prueba el verbo: ¿se puede medir?</h4>
-        <div class="verbs" id="verbs" style="margin:10px 0"></div>
-        <p class="small muted" id="verb-out">Elige un verbo. Un verbo es medible si se puede mostrar con evidencia cuándo se cumplió.</p>
-      </div>
       <div class="card" style="flex:1">
         <h4>Responde directamente a la pregunta</h4>
         <p class="small" style="margin-top:6px"><span class="tag">Pregunta</span> ¿Cuáles son los <u>hábitos de uso</u> de herramientas de IA…?</p>
@@ -550,9 +544,9 @@ input[type=range]{width:100%;accent-color:var(--blue);height:28px}
     <div class="seg stepseg" id="met-seg" style="margin-bottom:16px"><button class="on" data-k="0">Enfoque, alcance y diseño</button><button data-k="1">Procedimiento de recolección</button></div>
     <div class="pane on" data-k="0" style="height:auto">
       <div class="row" style="gap:16px">
-        <div class="flip" style="flex:1"><div><div class="f"><h4>Enfoque</h4><div class="big">Cuantitativo</div><p>Las variables se miden numéricamente y se analizan con estadística descriptiva y comparativa.</p><span class="hint">Toca para ver por qué</span></div><div class="b"><h4>Por qué</h4><p>Las doce variables de estudio son conteos, escalas o valores numéricos: días, horas, herramientas marcadas y acuerdo en escala Likert.</p></div></div></div>
-        <div class="flip" style="flex:1"><div><div class="f"><h4>Alcance</h4><div class="big">Descriptivo con componente correlacional</div><p>Se exploran asociaciones, no relaciones causales.</p><span class="hint">Toca para ver el límite</span></div><div class="b"><h4>Límite</h4><p>Describimos hábitos y comparamos grupos. Ni el diseño ni la muestra permiten decir que una variable causa a otra.</p></div></div></div>
-        <div class="flip" style="flex:1"><div><div class="f"><h4>Diseño</h4><div class="big">No experimental y transversal</div><p>No se manipula ninguna variable y se mide en un solo momento.</p><span class="hint">Toca para ver por qué</span></div><div class="b"><h4>Por qué</h4><p>Se aplica en un periodo corto y continuo para que el promedio del semestre sea comparable entre estudiantes.</p></div></div></div>
+        <div class="card" style="flex:1;padding:20px 22px"><h4 style="font-size:15px;color:var(--muted)">Enfoque</h4><div style="font-size:27px;font-weight:800;letter-spacing:-.03em;margin:8px 0 10px;line-height:1.15">Cuantitativo</div><p style="font-size:17px">Las variables se miden numéricamente y se analizan con estadística descriptiva y comparativa.</p></div>
+        <div class="card" style="flex:1;padding:20px 22px"><h4 style="font-size:15px;color:var(--muted)">Alcance</h4><div style="font-size:27px;font-weight:800;letter-spacing:-.03em;margin:8px 0 10px;line-height:1.15">Descriptivo con componente correlacional</div><p style="font-size:17px">Se exploran asociaciones, no relaciones causales.</p></div>
+        <div class="card" style="flex:1;padding:20px 22px"><h4 style="font-size:15px;color:var(--muted)">Diseño</h4><div style="font-size:27px;font-weight:800;letter-spacing:-.03em;margin:8px 0 10px;line-height:1.15">No experimental y transversal</div><p style="font-size:17px">No se manipula ninguna variable y se mide en un solo momento.</p></div>
       </div>
       <div class="card" style="margin-top:18px"><h4>Dónde se definen las variables, su tipo y su escala</h4><p>Los conceptos de enfoque, alcance y diseño siguen a <span class="cite" data-ref="hernandez">(Hernández-Sampieri y Mendoza, 2018)</span>. El consentimiento se maneja conforme a la Ley 1581 de 2012 <span class="cite" data-ref="ley">(Congreso de Colombia, 2012)</span>. Las variables, con su tipo y escala, están en la diapositiva siguiente; el plan de análisis, en la 15.</p></div>
     </div>
@@ -949,10 +943,6 @@ onEnter[1]=()=>{};
     if(!k){det.innerHTML='<p class="muted" style="margin-top:50px;text-align:center;font-size:17px">Toca cada parte del objetivo.</p>';det.style.borderTop='';return}
     const d=OG[k];det.style.borderTop=`6px solid ${d[2]}`;det.innerHTML=`<h4>${d[0]}</h4><p style="font-size:17px;line-height:1.45">${d[1]}</p>`}
   $$('.og [data-k]').forEach(s=>s.addEventListener('click',()=>show(s.dataset.k)));show(null);
-  const ok={Caracterizar:'Evidencia: tablas de frecuencias y medidas resumen de cada hábito.',Medir:'Evidencia: valores de días, horas y herramientas por estudiante.',Cuantificar:'Evidencia: porcentajes y promedios de uso en cada área.',Estimar:'Evidencia: distribución del grado de acuerdo en la escala de 1 a 5.',Comparar:'Evidencia: diferencias del uso entre grupos de edad, sexo, semestre y promedio.'};
-  const no={Conocer:'No es medible: no hay evidencia que muestre cuándo se «conoce» algo.',Entender:'No es medible: «entender» ocurre en la cabeza y no deja un dato observable.',Saber:'No es medible: no define qué resultado se verificaría.'};
-  const vb=$('#verbs');vb.innerHTML=Object.keys(ok).map(v=>`<button type="button" data-v="${v}" data-ok="1">${v}</button>`).join('')+Object.keys(no).map(v=>`<button type="button" data-v="${v}" data-ok="0">${v}</button>`).join('');
-  $$('button',vb).forEach(b=>b.addEventListener('click',()=>{$$('button',vb).forEach(x=>x.className='');const g=b.dataset.ok==='1';b.className='sel '+(g?'ok':'no');$('#verb-out').innerHTML=`<b>${g?'✓ Medible. ':'✗ No medible. '}</b>${g?ok[b.dataset.v]:no[b.dataset.v]}`}));
 })();
 
 /* ---------- 5 objetivos específicos ---------- */
@@ -1210,7 +1200,7 @@ $('#oes').innerHTML=OBJ.map(o=>`<div class="oe"><div class="v">${o.n}. ${o.verb}
 const h=parseInt((location.hash||'').slice(1),10);
 slides[0].classList.add('active');
 go(isNaN(h)?0:h-1);
-toast('← → para navegar · G índice · F pantalla completa');
+
 window.__go=go;window.__slides=slides;
 })();
 
